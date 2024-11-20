@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "nv-config-switcher"
+version = "0.1.0"
+description = ""
+authors = ["Tim Bryant <timothybryant3@gmail.com>"]
+readme = "README.md"
+packages = [{include = "cli", from = "."}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "^2.3.1"
+black = "^24.8.0"
+pytest = "^8.3.3"
+pre-commit = "^3.8.0"
+isort = "^5.13.2"
+pytest-asyncio = "^0.24.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  ".", "cli"
+]
+
+[tool.poetry.scripts]
+nvs = "cli.cli:main"

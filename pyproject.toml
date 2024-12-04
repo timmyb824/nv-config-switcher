@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["Tim Bryant <timothybryant3@gmail.com>"]
 readme = "README.md"
-packages = [{include = "cli", from = "."}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -21,10 +20,3 @@ pytest-asyncio = "^0.24.0"
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
-[tool.pytest.ini_options]
-pythonpath = [
-  ".", "cli"
-]
-
-[tool.poetry.scripts]
-nvs = "cli.cli:main"

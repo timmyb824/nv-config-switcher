@@ -106,7 +106,7 @@ def main():
         list_configs(configs)
     elif command == "init":
         init_configs(configs)
-        list_configs(configs)  # Show the configs after initialization
+        list_configs(configs)
     else:
         target = command
         choose_config(configs, target)
